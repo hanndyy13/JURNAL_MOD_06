@@ -8,6 +8,11 @@ public class SayaUserTube
 
     public SayaUserTube(string username)
     {
+        if(string.IsNullOrEmpty(username) || username.Length > 100)
+        {
+            throw new Exception("Username tidak boleh kosong dan maksimal 100 karakter");
+        }
+        
         this.username = username;
         this.uploadedVideo = new List<SayaUserVideo>();
     }
@@ -32,6 +37,10 @@ public class SayaUserTube
         foreach (SayaUserVideo video in uploadedVideo)
         {
             video.PrintVideoDetail();
+            if(video.getPlayCount() == 9)
+            {
+                break;
+            }
         }
     }
 }
@@ -44,14 +53,32 @@ public class SayaUserVideo
 
     public SayaUserVideo(int id, string title)
     {
+        if (string.IsNullOrEmpty(title) || title.Length > 200)
+        {
+            throw new Exception("Judul tidak boleh kosong dan maksimal 200 karakter");
+        }
         this.id = id;
         this.title = title;
     }
 
-    public int IncreasePlayCount(int count)
+    public void IncreasePlayCount(int count)
     {
-        playCount += count;
-        return playCount;
+        if(count < 0 || count > 25000000)
+        {
+            throw new Exception("Jumlah play count maksimal 25.000.000");
+        }
+        try
+        {
+            checked
+            {
+                playCount += count;
+            }
+        }
+        catch (OverflowException)
+        {
+            Console.WriteLine("Error: Jumlah play count melebihi batas maksimal");
+        }
+        
     }
 
     public int getPlayCount()
@@ -73,20 +100,11 @@ class Program
     {
         SayaUserTube userTube = new SayaUserTube("Muhammad Endihan A. N");
         SayaUserVideo video1 = new SayaUserVideo(1, "Review Film Jurrasic Park oleh Muhammad Endihan");
-        SayaUserVideo video2 = new SayaUserVideo(2, "Review Film Jurrasic Park II oleh Muhammad Endihan");
-        SayaUserVideo video3 = new SayaUserVideo(3, "Review Film Jurrasic Park III oleh Muhammad Endihan");
-        SayaUserVideo video4 = new SayaUserVideo(4, "Review Film Jurrasic Park IV oleh Muhammad Endihan");
-        SayaUserVideo video5 = new SayaUserVideo(5, "Review Film Jurrasic Park V oleh Muhammad Endihan");
-        SayaUserVideo video6 = new SayaUserVideo(6, "Review Film Jurrasic Park New Generation oleh Muhammad Endihan");
-        SayaUserVideo video7 = new SayaUserVideo(7, "Review Film Jurrasic Park Appocalpyse oleh Muhammad Endihan");
-        SayaUserVideo video8 = new SayaUserVideo(8, "Review Film Jurrasic Park Last War oleh Muhammad Endihan");
-        SayaUserVideo video9 = new SayaUserVideo(9, "Review Film Jurrasic Park Knight Kingdom oleh Muhammad Endihan");
-        SayaUserVideo video10 = new SayaUserVideo(10, "Review Film Jurrasic Park The King Of Jurrasic oleh Muhammad Endihan");
-        video1.IncreasePlayCount(100);
-        video2.IncreasePlayCount(200);
-        userTube.UploadVideo(video1);
-        userTube.UploadVideo(video2);
-        userTube.GetTotalVideoPlayCount();
-        userTube.PrintAllVideoPlayCount();
+
+        for (int i = 0; i < 10; i++)
+        {
+            video1.IncreasePlayCount(25000000);
+        }
+        video1.PrintVideoDetail();
     }
 }

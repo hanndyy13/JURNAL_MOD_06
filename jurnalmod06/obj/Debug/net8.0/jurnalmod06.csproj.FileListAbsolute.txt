@@ -1,0 +1,15 @@
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\bin\Debug\net8.0\jurnalmod06.exe
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\bin\Debug\net8.0\jurnalmod06.deps.json
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\bin\Debug\net8.0\jurnalmod06.runtimeconfig.json
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\bin\Debug\net8.0\jurnalmod06.dll
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\bin\Debug\net8.0\jurnalmod06.pdb
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\obj\Debug\net8.0\jurnalmod06.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\obj\Debug\net8.0\jurnalmod06.AssemblyInfoInputs.cache
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\obj\Debug\net8.0\jurnalmod06.AssemblyInfo.cs
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\obj\Debug\net8.0\jurnalmod06.csproj.CoreCompileInputs.cache
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\obj\Debug\net8.0\jurnalmod06.sourcelink.json
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\obj\Debug\net8.0\jurnalmod06.dll
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\obj\Debug\net8.0\refint\jurnalmod06.dll
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\obj\Debug\net8.0\jurnalmod06.pdb
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\obj\Debug\net8.0\jurnalmod06.genruntimeconfig.cache
+D:\My Code\GUI C#\jurnalmod06\jurnalmod06\obj\Debug\net8.0\ref\jurnalmod06.dll
